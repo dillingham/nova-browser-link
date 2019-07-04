@@ -34,7 +34,7 @@ function navigate() {
         }
     })
 
-    chrome.tabs.update({url: nova_meta_url + '/' + path + '/resources/' + resource + '/' + id});
+    chrome.tabs.update({url: nova_meta_url + path + '/resources/' + resource + '/' + id});
 }
 
 chrome.browserAction.onClicked.addListener(navigate);
