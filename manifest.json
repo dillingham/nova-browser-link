@@ -23,10 +23,7 @@
         ],
         "persistent": false
     },
-    "permissions": [
-        "http://*/*",
-        "https://*/*"
-    ],
+    "permissions": ["activeTab"],
     "content_scripts": [{
         "matches": [
             "<all_urls>"
