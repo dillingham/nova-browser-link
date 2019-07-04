@@ -1,0 +1,39 @@
+{
+    "name": "Nova Links",
+    "version": "1.0",
+    "version_name": "1.0",
+    "description": "Detect & navigate Nova links",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icons/16-gray.png",
+        "48": "icons/48-gray.png",
+        "128": "icons/128-gray.png"
+    },
+    "browser_action": {
+        "default_title": "Nova Link",
+        "default_icon": {
+            "16": "icons/16-gray.png",
+            "48": "icons/48-gray.png",
+            "128": "icons/128-gray.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+          "detector.js"
+        ],
+        "run_at": "document_idle"
+    }]
+}
